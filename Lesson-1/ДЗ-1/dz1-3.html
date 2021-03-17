@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        'use strict';
+        let result1 = 10 + 10 + "10";
+        let result2 = 10 + "10" + 10;
+        let result3 = 10 + 10 + +"10";
+        let result4 = 10 / -"";
+        let result5 = 10 / +"2,5";
+        console.log(result1); // (10+10=20) далее 20 конкатенируется  с "10" и получится результат 2010
+        console.log(result2); // здесь тоже конкатенация числа слепятся в строку 101010
+        console.log(result3); // унарный плюс преобразует строку "10" в число, все десятки суммируются, результат 30
+        console.log(result4); // -унарный минус преобразует пустую строку в -0, результат будет -бесконечность
+        console.log(result5); // из-за запятой унарный плюс не сможет преобразовать "2,5" в число, результат будет NaN
+    </script>
+</body>
+
+</html>
